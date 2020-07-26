@@ -7,24 +7,16 @@ const Navigation = () => {
     <Nav>
       <ul>
         <li>
-          <Link to="/about" style={{ textDecoration: "none", color: "#fff" }}>
-            ABOUT
-          </Link>
+          <StyledLink to="/about">ABOUT</StyledLink>
         </li>
         <li>
-          <Link to="/board" style={{ textDecoration: "none", color: "#fff" }}>
-            BOARD
-          </Link>
+          <StyledLink to="/board">BOARD</StyledLink>
         </li>
         <li>
-          <Link to="/mypage" style={{ textDecoration: "none", color: "#fff" }}>
-            MYPAGE
-          </Link>
+          <StyledLink to="/mypage">MYPAGE</StyledLink>
         </li>
         <li>
-          <Link to="/contact" style={{ textDecoration: "none", color: "#fff" }}>
-            CONTACT
-          </Link>
+          <StyledLink to="/contact">CONTACT</StyledLink>
         </li>
       </ul>
     </Nav>
@@ -48,8 +40,12 @@ const Nav = styled.div`
     font-size: 20px;
   }
 `;
-// const styledLink = styled(Link)`
-//   text-decoration: none;
-// `;
+const StyledLink = styled(Link)`
+  text-decoration: none;
+  color: #fff;
+  &:hover {
+    color: red;
+  }
+`;
 
 export default Navigation;
